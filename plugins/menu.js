@@ -21,24 +21,6 @@ const defaultMenu = {
 %m2 *Total Xp:* %totalexp
 %m3
 
-%m1 *T O D A Y*
-%m2 *%ucpn*
-%m2 *Days:* %week %weton
-%m2 *Date:* %date
-%m2 *Islamic Date:* %dateIslamic
-%m2 *Time:* %wib
-%m3
-
-%m1 *I N F O*
-%m2 *Bot Name:* %me
-%m2 *Mode:* %mode
-%m2 *Platform:* %platform
-%m2 *Type:* Node.Js
-%m2 *Baileys:* Multi Device
-%m2 *Prefix:* [ *%_p* ]
-%m2 *Uptime:* %muptime
-%m2 *Database:* %rtotalreg dari %totalreg
-%m3
 
 %m1 *I N F O  C M D* 
 %m4 *Ⓟ* = Premium
@@ -262,9 +244,9 @@ ${clockStringP(usrs.premiumTime - new Date())}` : ''}
 `
 const listMessage = {
   text: tek,
-  footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
+  footer: '*PENTING* : Jangan menyalah gunakan bot. apabila bot melakukan hal yang tidak di inginkan, itu adalah kesalahan si *pengguna* Karena bot hanya menjalankan perintah semata\n\n *Salam Damai wahai saudaraku*',
   title: `${htki} *LIST MENU* ${htka}`,
-  buttonText: `CLICK HERE ⎙`,
+  buttonText: `KLIK DISINI ⎙`,
   sections
 }
   if (teks == '404') {
@@ -436,7 +418,7 @@ const listMessage = {
     //------------------< MENU >----------------
     
     //------------------ SIMPLE
-    /*conn.reply(m.chat, text, fkon, { contextInfo: { mentionedJid: [m.sender],
+ /*   conn.reply(m.chat, text, fkon, { contextInfo: { mentionedJid: [m.sender],
         externalAdReply: {
             title: `${htjava} ${namebot}`,
             body: titlebot,
@@ -457,7 +439,7 @@ const listMessage = {
     let td = `${pickRandom([d1,d2,d3,d4,d5])}`
     
     //-------DOC TEMPLATE
-    const message = {
+    /*const message = {
             document: { url: thumb },
             jpegThumbnail: await (await fetch(thumb)).buffer(),
             fileName: '𝗧 𝗜 𝗠 𝗘 : ' + wktuwib,
@@ -499,10 +481,10 @@ const listMessage = {
                 },
             ]
         }
-        await conn.sendMessage(m.chat, message)
+        await conn.sendMessage(m.chat, message)*/
         
     //------------------- BUTTON VID
-    //conn.sendButton(m.chat, text, wm, 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4', [['Ping', '.ping'],['Owner', '.owner'],['Donasi', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: sig, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
+    conn.sendButton(m.chat, text, wm, 'https://telegra.ph/file/1a295c71b07bd227904a1.mp4', [['𝐆roup ⎙', '.gcbot'],['𝐎wner ⎙', '.owner'],['𝐃onasi ⎙', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: tiny, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
     
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
@@ -513,7 +495,7 @@ handler.help = ['menu', 'help', '?']
 handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
 
-handler.register = true
+handler.register = false
 handler.exp = 3
 
 export default handler
