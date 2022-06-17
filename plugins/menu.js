@@ -482,9 +482,15 @@ const listMessage = {
             ]
         }
         await conn.sendMessage(m.chat, message)*/
+            let zero = 'https://telegra.ph/file/1a295c71b07bd227904a1.mp4'
+    let zero2 = 'https://telegra.ph/file/7c3119dcc43240dc0800c.mp4'
+    let zero3  = 'https://telegra.ph/file/86f02e3c3597f812e2d3a.mp4'
+    let zero4 = 'https://telegra.ph/file/d429dd683f51e07fedaa3.mp4'
+    let zero5 = 'https://telegra.ph/file/580b4f0274cd6f9f4e0ec.mp4'
+    let jero = `${pickRandom([zero,zero2,zero3,zero4,zero5])}`
         
     //------------------- BUTTON VID
-    conn.sendButton(m.chat, text, wm, 'https://telegra.ph/file/1a295c71b07bd227904a1.mp4', [['𝐆roup ⎙', '.gcbot'],['𝐎wner ⎙', '.owner'],['𝐃onasi ⎙', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: tiny, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
+    conn.sendButton(m.chat, text, wm, jero, [['𝐆roup ⎙', '.gcbot'],['𝐎wner ⎙', '.owner'],['𝐃onasi ⎙', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: tiny, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
     
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)

@@ -16,6 +16,6 @@ handler.help = ['mediafire'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^(mediafire|mf)$/i
 
-handler.limit = true
+handler.premium = true
 
 export default handler
