@@ -43,7 +43,12 @@ let td = 'application/vnd.openxmlformats-officedocument.wordprocessingml.documen
             ]
         }
         return await conn.sendMessage(m.chat, message)*/
-conn.reply(m.chat, info, m, { contextInfo: { externalAdReply: {title: global.wm, body: 'Yaw? ada apa kak?', sourceUrl: snh, thumbnail: fs.readFileSync('./thumbnail.jpg')  }}})
+    conn.sendButton(m.chat, info, m, 'https://telegra.ph/file/1a295c71b07bd227904a1.mp4', [['𝐆roup ⎙', '.gcbot'],['𝐎wner ⎙', '.owner'],['𝐃onasi ⎙', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
+    
+  } catch (e) {
+    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    throw e
+  }
 }
 handler.customPrefix = /^(tes|tess|test)$/i
 handler.command = new RegExp
